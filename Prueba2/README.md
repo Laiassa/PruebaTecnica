@@ -48,6 +48,7 @@ Tener una cuenta de AWS.
 2. configurar el security group de forma que permita acceso a internet
 3. colocar en opciones avanzadas el siguiente codigo:
 
+"""
 #!/bin/bash
 
 # Actualizar los paquetes de la instancia
@@ -75,5 +76,6 @@ docker-compose build
 docker-compose up -d
 
 4. luego buscar la ip de la instancia, y abrir el puerto 3000 de esa ip en el navegador
+"""
    
 
