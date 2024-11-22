@@ -46,36 +46,8 @@ Tener una cuenta de AWS.
 #### Pasos para el Despliegue:
 1. crear una instancia EC2 con una imagen de linux
 2. configurar el security group de forma que permita acceso a internet
-3. colocar en opciones avanzadas el siguiente codigo:
-
-"""
-#!/bin/bash
-
-# Actualizar los paquetes de la instancia
-yum update -y
-
-# Instalar dependencias necesarias (ejemplo para una app Node.js)
-yum install -y git
-yum install -y nodejs
-yum install -y npm
-yum install -y docker
-
-# Clonar el repositorio desde GitHub (ajustar la URL de tu repo)
-git clone https://github.com/usuario/mi-repo.git /home/ec2-user/mi-app
-
-# Navegar al directorio de la app
-cd /home/ec2-user/Prueba-2/Estetica
-
-# Instalar dependencias de la aplicación (si es una app Node.js, por ejemplo)
-npm install
-
-# En la terminal buildear las imagenes a partir de los dockerfiles
-docker-compose build
-
-# levantar los contenedores:
-docker-compose up -d
-
+3. colocar en opciones avanzadas el codigo subido al repositorio llamado "user data"
 4. luego buscar la ip de la instancia, y abrir el puerto 3000 de esa ip en el navegador
-"""
+
    
 
