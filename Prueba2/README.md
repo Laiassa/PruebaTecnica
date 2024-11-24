@@ -38,7 +38,7 @@ Tener una cuenta de AWS.
 #### Pasos para el Despliegue:
 1. crear una instancia EC2 con una imagen de linux
 2. configurar el security group de forma que permita acceso a internet y crear una regla TCP custom de inbound que habilite el puerto 3000.
-3. colocar en opciones avanzadas el codigo subido al repositorio llamado "user data"
+3. colocar en opciones avanzadas el codigo subido al repositorio llamado "UserData"
 4. luego buscar la ip de la instancia, y abrir el puerto 3000 de esa ip en el navegador.
 
    
