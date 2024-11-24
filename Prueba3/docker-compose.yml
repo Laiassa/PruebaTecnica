@@ -1,0 +1,6 @@
+version: "3.8"
+services:
+  web:
+    image: yourhouse/nginx-prueba3:${VERSION}
+    ports:
+      - "8080:80"
