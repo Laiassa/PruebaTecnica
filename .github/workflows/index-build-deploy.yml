@@ -33,4 +33,18 @@ jobs:
       run: |
         docker push yourhouse/nginx-prueba3:latest
 
+    - name: Set up AWS CLI
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-2 
+
+    - name: Update ECS service to force new deployment
+      run: |
+        # Force a new deployment of the ECS service
+        aws ecs update-service \
+          --cluster PruebaCluster \
+          --service web-service \
+          --force-new-deployment
    
