@@ -1,7 +1,7 @@
-# Pipeline para que cada cambio en index.html tenga un nuevo build y luego deploy con docker-compose
 name: CI/CD Pipeline
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -11,6 +11,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+          run:
+            working-directory: Prueba3
 
     steps:
     - name: Checkout repository
