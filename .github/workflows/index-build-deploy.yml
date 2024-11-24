@@ -48,6 +48,11 @@ jobs:
           --service web-service \
           --force-new-deployment
    
+    - name: Update ECS service to force new deployment
+      run: |
+        # wait 60 seconds for task update
+        sleep 60
+
     - name: Get ECS Task ID
       id: get_task_id
       run: |
