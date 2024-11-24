@@ -1,27 +1,19 @@
-# Prueba 2: Creacion de app Estetica
-En esta prueba se elaboro una aplicacion en Django (backend) con frontend en React.js. 
-Esta aplicacion consiste de una aplicacion para agendar turnos para una estetica. Se pueden agendar turnos de peluqueria, manicura y otros. Para esto se debe autenticar el usuario y elegir entre los horarios disponibles en la agenda, una vez elegido el turno este deja de estar disponible para el resto.
-Esta aplicacion se encuentra dockerizada, lo que significa que se utiliza un dockerfile para generar una imagen para el backend, otro dockerfile para la imagen del frontend y luego se utiliza un docker-compose para desplegar ambas imagenes.
+# Prueba 2: Creacion de app To Do List
 
-## Arquitectura General de la Aplicación
-### Backend:
+## Descripcion de la aplicacion
+En esta prueba se elaboro una aplicacion en Django (backend) con frontend en React.js, es una aplicacion fullstack donde se puede:
 
-Usaremos Django para gestionar:
-Servicios (peluquería, manicura, pestañas).
-Turnos disponibles y reservados.
-Proveerá APIs REST para que el frontend pueda comunicarse.
-### Frontend:
+- crear notas con un titulo y contenido
+- revisar todas las notas con su respectivo momento de creacion
+-  guardar los datos en una base de datos de Django
+-  utilizar REST API, para la comunicacion del backend y frontend
 
-Usaremos React.js para:
-Mostrar los servicios disponibles.
-Permitir a los usuarios seleccionar horarios y reservar turnos.
-Conectar con las APIs del backend mediante Axios.
-### Docker-Compose:
+### Contenerizado de la app:
 
-Se desplegarán ambos servicios (backend y frontend) en un único contenedor Docker.
+Se desplega un contenedor para el backend y otro para el frondtend, cada uno tiene su respectivo dockerfile para crear la imagen correspondiente a cada contenedor. 
+Luego se utiliza un docker-compose para la orquestracion de estos contenedores.
 
 ## Instrucciones para el Despliegue:
-
 ### En una PC 
 #### Requisitos mínimos en tu computadora
 ##### Docker instalado:
@@ -32,7 +24,7 @@ Necesitarás git para clonar el repositorio si no lo has hecho ya.
 1. Copiar el contenido de este repositorio en tu PC local,
    "git clone https://github.com/Laiassa/PruebaTecnica.git"
 2. Navegar a la carpeta correspondiente
-   " cd Prueba-2/Estetica "
+   " cd PruebaTecnica/Prueba2 "
 3. En la terminal buildear las imagenes a partir de los dockerfiles
    " docker-compose build "
 4. levantar los contenedores:
