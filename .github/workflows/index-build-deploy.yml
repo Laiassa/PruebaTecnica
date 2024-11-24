@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - index.html
+      - Prueba3/index.html
       
 jobs:
   build-and-deploy:
