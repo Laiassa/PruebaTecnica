@@ -32,8 +32,10 @@ Necesitarás git para clonar el repositorio si no lo has hecho ya.
 5. Ir a "http://localhost:3000"
 
 6. Limpieza:
-         - primero hago stop de los containers andando con "docker stop $(docker ps -q)"
-         - luego elimino todos los containers, andando y parados con "docker rm $(docker ps -aq)"
+   
+         - primero hago stop de los containers andando con " docker stop $(docker ps -q) "
+   
+         - luego elimino todos los containers, andando y parados con " docker rm $(docker ps -aq) "
 
 ### En AWS
 #### Pre-requisitos:
